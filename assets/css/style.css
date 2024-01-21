@@ -1,5 +1,5 @@
 /* Google Font*/
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
 
 /* Asterisk wilcard selector to override default styles added by the browser */
 * {
@@ -11,6 +11,9 @@
 }
 body{
     background-color: #adff2f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
 }
 .head {
     font-family: 'Orbitron', sans-serif;
