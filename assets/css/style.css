@@ -10,11 +10,43 @@
 
 }
 body{
-    background-color: #adff2f;
+
+    background-color: #3bf0fd;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 
 }
 .head {
+    padding: 2.5em 3em;
     font-family: 'Orbitron', sans-serif;
+    text-shadow: 2px 2px orange;
+    border-block: solid rgb(76, 0, 255);
+    
+}
+.logo{
+    padding: 0.2em 1em;
+}
+
+#memory-settings-grid{
+    width:100%;
+    margin-bottom:16px;
+    font-size:18px;
+    background: orange;
+    color: white;
+    height:50px;
+    text-align: center;
+}
+
+button{
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    background-color: #ffa500; 
+    font-size: 16px;
+    color: #fff;
+    
+}
+button:hover {
+    background-color: #0056b3;
 }
