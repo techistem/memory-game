@@ -11,7 +11,7 @@
 }
 body{
 
-    background-color: #3bf0fd;
+    background: linear-gradient(135deg, #03001e 0%, #7303c0 0%, #ec38bc 50%, #fdeff9 100%);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 
