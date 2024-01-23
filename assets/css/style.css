@@ -26,7 +26,15 @@ body{
 .logo{
     padding: 0.2em 1em;
 }
-
+.controls-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background: red;
+    padding: 40px 60px;
+}
 #memory-settings-grid{
     width:100%;
     margin-bottom:16px;
