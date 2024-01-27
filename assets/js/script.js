@@ -1,7 +1,9 @@
-const startButton = document.getElementById("START");
-
-//Start game
-startButton.addEventListener("click", () => {
-    movesCount = 0;
-    time = 0;
-)}
+const tipsContainer = document.getElementById("tips-container")
+const closeContainer = document.getElementById("close-container")
+const tipBtn = document.getElementById("tips-btn")
+tipsBtn.addEventListener("click", function(){
+    tipsContainer.style.display = "flex"
+    closeContainer.addEventListener("click", function(){
+        tipsContainer.style.display = "none"
+    })
+})
