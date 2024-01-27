@@ -6,10 +6,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 
 }
-body{
+
+body {
 
     background: linear-gradient(135deg, #03001e 0%, #7303c0 0%, #ec38bc 50%, #fdeff9 100%);
     font-family: 'Roboto', sans-serif;
@@ -17,16 +18,49 @@ body{
     font-weight: bold;
 
 }
+
 .head {
+    text-align: center;
     padding: 2.5em 3em;
     font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
     text-shadow: 2px 2px orange;
     border-block: solid rgb(76, 0, 255);
-    
+
 }
-.logo{
+
+.logo {
     padding: 0.2em 1em;
 }
+
+#tips-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tips-container {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    width: 70%;
+    margin: 100px;
+    border: 3px solid #94c4c7;
+    padding: 10px 5px;
+    line-height: 40px; 
+}
+#close-container{
+    color:black;
+    cursor: pointer;
+}
+
+  
+h3 {
+    color: red;
+    text-align: center;
+   font-size: 30px;
+}
+
 .controls-container {
     position: relative;
     display: flex;
@@ -36,32 +70,36 @@ body{
     background: red;
     padding: 40px 60px;
 }
-#memory-settings-grid{
-    width:100%;
-    margin-bottom:16px;
-    font-size:18px;
+
+#memory-settings-grid {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 18px;
     background: orange;
     color: white;
-    height:50px;
+    height: 50px;
     text-align: center;
+    cursor: pointer;
 }
 
-button{
+button {
     border: none;
     border-radius: 0.3em;
     padding: 1em 1.5em;
     cursor: pointer;
-    background-color: #ffa500; 
+    background-color: #ffa500;
     font-size: 16px;
     color: #fff;
-    
+
 }
+
 button:hover {
     background-color: #0056b3;
 }
+
 /* Game Styles */
 
-.card{
+.card {
     background-color: greenyellow;
     position: relative;
     width: 200px;
@@ -91,14 +129,13 @@ sup {
     font-size: xxx-large;
     color: white;
     border-radius: 10px;
-  }
+}
 
-  .card .front {
+.card .front {
     background-color: #3498db;
-  }
-  
-  .card .back {
+}
+
+.card .back {
     background-color: #94c4c7;
     transform: rotateY(180deg);
-  }
-  
+}
