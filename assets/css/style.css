@@ -3,7 +3,7 @@
 
 /* Asterisk wilcard selector to override default styles added by the browser */
 * {
-    
+
     margin: 0;
     box-sizing: border-box;
 
@@ -52,7 +52,7 @@ body {
     width: 70%;
     border: 3px solid #94c4c7;
     padding: 10px 5px;
-    line-height: 40px; 
+    line-height: 40px;
     position: fixed;
     z-index: 20;
     top: 50%;
@@ -62,9 +62,11 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    display: none;
 }
+
 #close-container {
-    color:black;
+    color: black;
     cursor: pointer;
     position: absolute;
     top: 20px;
@@ -72,20 +74,25 @@ body {
     font-size: 1.4rem;
 }
 
-  
+#memory-settings-grid,
+#tips-btn,
+#start {
+    margin-bottom: 10px;
+}
+
 h3 {
     color: red;
     text-align: center;
-   font-size: 30px;
+    font-size: 30px;
 }
-
 .controls-container {
     position: relative;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
-    background: red;
+    background: url('assets/images/number.jpg') no-repeat center center fixed;
     padding: 40px 60px;
     flex-wrap: wrap;
 }
@@ -109,7 +116,6 @@ button {
     background-color: #ffa500;
     font-size: 16px;
     color: #fff;
-
 }
 
 button:hover {
@@ -117,6 +123,13 @@ button:hover {
 }
 
 /* Game Styles */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
 
 .card {
     background-color: greenyellow;
@@ -127,11 +140,6 @@ button:hover {
     transform: rotateY(0deg);
     transition: transform 1s ease;
     border-radius: 10px;
-
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 200px;
 }
 
 sup {
@@ -153,7 +161,7 @@ sup {
     font-size: xxx-large;
     color: white;
     border-radius: 10px;
-    
+
 }
 
 .card .front {

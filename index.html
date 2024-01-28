@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <div id="tips-container" style="display: flex;"><span id="close-container">X</span>
+
+    <div id="tips-container"><span id="close-container">X</span>
         <h3>What is Exponent?</h3>
         <br>
         <p> An exponent of o number, represents the mumber of times the number is multiplied to itself.</p>
@@ -32,25 +33,32 @@
         <br>
         <p>The above expression, 7<sup>n</sup>, is said as 7 raised to the power n.</p>
     </div>
-   
+
     <!-- Header -->
     <header>
+        <!--Company Logo-->
         <a href="index.html">
             <img src="assets/images/logo.png" alt="Company Logo" class="logo">
         </a>
+
         <div class="head">
             <h1>Match the Exponents!</h1>
+            <br>
+            <p>Are you ready to race against time and challenge yourself? The game is very simple.
+                We expect you to match the exponents and their results as fast as possible.</p>
         </div>
-        <p>Are you ready to race against time and challenge yourself? The game is very simple.
-            We expect you to match the exponents and their results as fast as possible.</p>
 
+        <!--Button section-->
         <div class="controls-container">
+            <button id="tips-btn">TIPS</button>
             <select id="memory-settings-grid">
-                <button id="tips-btn">TIPS</button>
                 <option>Easy</option>
                 <option>Medium</option>
             </select>
+            <button id="start">START</button>
+
             <!--Game section-->
+            <div class="card-container">
             <div class="card">
                 <div class="front view">3<sup>2</sup></div>
                 <div class="back view">?</div>
@@ -116,7 +124,7 @@
                 <div class="back view">?</div>
             </div>
 
-            <button id="start">START</button>
+
 
             <div class="details">
                 <p class="time">Time: <span><b>0</b></span>
@@ -126,6 +134,7 @@
         </div>
 
         </div>
+    </div>
 
     </header>
 
