@@ -3,7 +3,7 @@
 
 /* Asterisk wilcard selector to override default styles added by the browser */
 * {
-    padding: 0;
+    
     margin: 0;
     box-sizing: border-box;
 
@@ -16,6 +16,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
     font-weight: bold;
+    position: relative;
 
 }
 
@@ -34,24 +35,41 @@ body {
 }
 
 #tips-btn {
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    background-color: #ffa500;
+    font-size: 16px;
+    color: white;
 }
 
 #tips-container {
     background-color: #f0f0f0;
     border-radius: 20px;
     width: 70%;
-    margin: 100px;
     border: 3px solid #94c4c7;
     padding: 10px 5px;
     line-height: 40px; 
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
-#close-container{
+#close-container {
     color:black;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.4rem;
 }
 
   
@@ -65,10 +83,11 @@ h3 {
     position: relative;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
     background: red;
     padding: 40px 60px;
+    flex-wrap: wrap;
 }
 
 #memory-settings-grid {
