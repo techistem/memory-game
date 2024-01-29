@@ -7,3 +7,4 @@ tipsBtn.addEventListener("click", function(){
         tipsContainer.style.display = "none"
     })
 })
+
