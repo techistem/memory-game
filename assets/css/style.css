@@ -65,7 +65,7 @@ header a {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    display: none;
+    display: flex;
 }
 
 #close-container {
@@ -140,11 +140,11 @@ button:hover {
 
 /* Game Styles */
 
-.card-container {
+#card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-     display: none;
+   
 
 }
 
@@ -191,4 +191,7 @@ sup {
     background-color: #94c4c7;
     border: 2px white;
     transform: rotateY(180deg);
+}
+.hide {
+    display: none !important;
 }

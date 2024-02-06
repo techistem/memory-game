@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div id="tips-container"><span id="close-container">X</span>
+    <div id="tips-container" class="hide"><span id="close-container">X</span>
         <h3>What is Exponent?</h3>
         <br>
         <p> An exponent of o number, represents the mumber of times the number is multiplied to itself.</p>
@@ -45,98 +45,100 @@
             <p>Are you ready to race against time and challenge yourself? The game is very simple.
                 We expect you to match the exponents and their results as fast as possible.</p>
         </div>
-
-        <!--Button section-->
-        <div class="controls-container">
-            <div class="btn-container">
-                <button id="tips-btn">TIPS</button>
-                <select id="memory-settings-grid">
-                    <option>Easy</option>
-                    <option>Medium</option>
-                </select>
-                <button id="start">START</button>
-            </div>
-
-            <!--Game section-->
-            <div class="card-container">
-                <div class="card">
-                    <div class="front view">3<sup>2</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">5<sup>3</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">9</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">125</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">4<sup>1</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">2<sup>4</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">4</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">16</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">3<sup>3</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">1<sup>3</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">27</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">1</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">7<sup>2</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">6<sup>2</sup></div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">49</div>
-                    <div class="back view">?</div>
-                </div>
-                <div class="card">
-                    <div class="front view">36</div>
-                    <div class="back view">?</div>
-                </div>
-
-
-
-                <div class="details">
-                    <p class="time">Time: <span><b>0</b></span>
-                    <p class="flips">Flips : <span><b>0</b></span></p>
-                </div>
-
-            </div>
-
-        </div>
-        </div>
-
     </header>
+
+    <!--Button section-->
+    <div id="controls-container" class="controls-container">
+        <div id="btn-container" class="btn-container">
+            <button id="tips-btn">TIPS</button>
+            <select id="memory-settings-grid">
+                <option>Easy</option>
+                <option>Medium</option>
+            </select>
+            <button id="start">START</button>
+        </div>
+    </div>
+
+    <!--Game section-->
+    <div id="card-container" class="hide">
+        <div class="card">
+            <div class="front view">3<sup>2</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">5<sup>3</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">9</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">125</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">4<sup>1</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">2<sup>4</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">4</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">16</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">3<sup>3</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">1<sup>3</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">27</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">1</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">7<sup>2</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">6<sup>2</sup></div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">49</div>
+            <div class="back view">?</div>
+        </div>
+        <div class="card">
+            <div class="front view">36</div>
+            <div class="back view">?</div>
+        </div>
+
+
+
+        <div class="details">
+            <p class="time">Time: <span><b>0</b></span>
+            <p class="flips">Flips : <span><b>0</b></span></p>
+        </div>
+
+    </div>
+
+    
+
+
+
 
 
 
