@@ -13,6 +13,9 @@ body {
     font-size: 1.125rem;
     font-weight: bold;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header a {
     position: fixed; 
@@ -99,6 +102,16 @@ h3 {
     width: 100%;
 }
 
+.game-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
 .controls-container {
     position: relative;
     display: flex;
@@ -152,8 +165,10 @@ button:hover {
 .card {
     background-color: greenyellow;
     position: relative;
-    width: 200px;
-    height: 300px;
+    width: 18vw;
+    height: 26vw;
+    max-width: 200px;
+    max-height: 250px;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
     transition: transform 1s ease;

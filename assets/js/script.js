@@ -10,8 +10,10 @@ tipsBtn.addEventListener("click", function(){
     })
 })
 const startBtn = document.getElementById("start") 
+const header = document.querySelector(".head")
 startBtn.addEventListener("click", function(){
     cardContainer.classList.remove("hide")
     controlsContainer.classList.add("hide")
+    header.classList.add("hide")
 })
 
