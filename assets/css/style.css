@@ -105,14 +105,20 @@ h3 {
 }
 
 .game-container {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     max-width: 800px;
     margin: 0px auto;
 }
 
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
 .controls-container {
     position: relative;
     display: flex;
@@ -177,6 +183,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 4em;
 }
 
 sup {
@@ -211,7 +218,7 @@ sup {
 .back {
     background-color: #94c4c7;
     border: 2px white;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 }
 
 .hide {
@@ -223,6 +230,7 @@ sup {
 
 
 }
+
 @media screen and (max-width: 900px) {
     .game-container {
         position: absolute;

@@ -60,56 +60,36 @@
     </div>
 
     <!--Game section-->
-    <div class="game-container">
-        <div id="card-container" class="hide">
-            <div class="card view front"> 3 <sup> 2 </sup>
-            </div>
-            <div class="card view front "> 9
-
-            </div>
-            <div class="card view front"> 4 <sup> 1 </sup>
-
-            </div>
-            <div class="card view front"> 4
-
-            </div>
-            <div class="card view front"> 3 <sup> 3 </sup>
-
-            </div>
-            <div class="card view front"> 1 <sup>3</sup>
-
-            </div>
-            <div class="card view front">
-                27
-            </div>
-            <div class="card view front">
-                1
-            </div>
-            <div class="card view front">
-                7 <sup> 2 </sup>
-            </div>
-            <div class="card view front">
-                6 <sup>2 </sup>
-            </div>
-            <div class="card view front">
-                49
-            </div>
-            <div class="card view front">
-                36
-            </div>
-        </div>
-    </div>
-    <div class="details">
+    <div id="details" class="details hide">
         <div class="time">Time:</div>
         <div class="flips">Flips:</div>
     </div>
-    <div id="win">
-        <h2>Congratulations!</h2>
-        <button id="restart">RESTART</button>
+    <div class="game-container">
+        <div id="card-container" class="hide">
+            <div class="card view front" data-match="1"> 3 <sup> 2 </sup></div>
+            <div class="card view front" data-match="1"> 9 </div>
+            <div class="card view front" data-match="2"> 4 <sup> 1 </sup></div>
+            <div class="card view front" data-match="2"> 4</div>
+            <div class="card view front" data-match="3"> 3 <sup> 3 </sup></div>
+            <div class="card view front" data-match="3"> 27 </div>
+            <div class="card view front" data-match="4"> 1 <sup> 3 </sup></div>
+            <div class="card view front" data-match="4"> 1 </div>
+            <div class="card view front" data-match="5"> 7 <sup> 2 </sup></div>
+            <div class="card view front" data-match="5"> 49 </div>
+            <div class="card view front" data-match="6"> 6 <sup> 2 </sup></div>
+            <div class="card view front" data-match="6"> 36 </div>
+        </div>
     </div>
-    <div id="homepg">
-        <button id="homepg-btn">HOME PAGE</button>
-    </div>
+    <section id="results" class="hide">
+       
+        <div id="win">
+            <h2>Congratulations!</h2>
+            <button id="restart">RESTART</button>
+        </div>
+        
+
+    </section>
+    
 </body>
 
 
