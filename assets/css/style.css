@@ -217,3 +217,19 @@ sup {
 .hide {
     display: none !important;
 }
+
+
+#restart-btn {
+
+
+}
+@media screen and (max-width: 900px) {
+    .game-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 800px;
+        margin: 0px auto;
+    }
+}
