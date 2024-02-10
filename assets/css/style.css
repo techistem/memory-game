@@ -110,7 +110,7 @@ h3 {
     top: 50%;
     transform: translate(-50%, -50%); */
     max-width: 800px;
-    margin: 0px auto;
+    margin: 10px auto;
 }
 
 #details {
@@ -213,13 +213,15 @@ sup {
 .front {
     background-color: #3498db;
     border: 2px white;
+    z-index: 3;  
 }
 
 .back {
     background-color: #94c4c7;
     border: 2px white;
-    /* transform: rotateY(180deg); */
+     /* transform: rotateY(180deg);  */
 }
+
 
 .hide {
     display: none !important;
