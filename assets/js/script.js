@@ -4,7 +4,7 @@ const closeContainer = document.getElementById("close-container")
 const cardContainer = document.getElementById("card-container")
 const controlsContainer = document.getElementById("controls-container")
 
-const cardFrontTemplate = [
+let cardFrontTemplate = [
     `<div class="card view back" data-match="1"> 3 <sup> 2 </sup></div>`,
     `<div class="card view back" data-match="1"> 9 </div>`,
     `<div class="card view back" data-match="2"> 4 <sup> 1 </sup></div>`,
@@ -18,6 +18,9 @@ const cardFrontTemplate = [
     `<div class="card view back" data-match="6"> 6 <sup> 2 </sup></div>`,
     `<div class="card view back" data-match="6"> 36 </div>`
 ]
+
+//butonu seç const button = document....
+//if(button.innerText === "Medium"){ cardFrontTemplate = [.....]}
 
 //Tips container view function
 const tipsBtn = document.getElementById("tips-btn")
@@ -80,6 +83,9 @@ const restartBtn = document.getElementById("restart")
 restartBtn.addEventListener("click", function () {
     location.reload();
 });
+
+
+
 
 
 

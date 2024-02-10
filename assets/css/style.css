@@ -217,7 +217,7 @@ sup {
 }
 
 .back {
-    background-color: #94c4c7;
+    background-color: #c794a8;
     border: 2px white;
      /* transform: rotateY(180deg);  */
 }
@@ -228,9 +228,10 @@ sup {
 }
 
 
-#restart-btn {
-
-
+#win {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 900px) {
