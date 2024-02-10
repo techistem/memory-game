@@ -1,4 +1,4 @@
-
+//SELECTORS
 const tipsContainer = document.getElementById("tips-container")
 const closeContainer = document.getElementById("close-container")
 const cardContainer = document.getElementById("card-container")
@@ -28,6 +28,17 @@ startBtn.addEventListener("click", function () {
     shuffleCards();
 })
 
+//Creating Cards
+for(let i = 0; i<12; i++){
+    const divEl = document.createElement("div") //node element
+    divEl.classList.add("card","view","front")
+    const imgEl = document.createElement("img")
+    imgEl.src = "https://via.placeholder.com/100x100?text=?"
+    divEl.append(imgEl)
+    cardContainer.append(divEl)
+
+}
+
 // shuffle cards
 function shuffleCards() {
     cardArray.forEach(card => {
@@ -45,7 +56,7 @@ for (let i = 0; i < cardArray.length; i++) {
     })
 }
 
-//
+// Restart Button
 const restartBtn = document.getElementById("restart")
 restartBtn.addEventListener("click", function () {
     location.reload();

@@ -160,20 +160,20 @@ button:hover {
 
 /* Game Styles */
 
-#card-container {
+ #card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 
 
-}
+} 
 
 
-.card {
+ .card {
     text-align: center;
     position: relative;
-    width: 18vw;
-    height: 26vw;
+    width: 15vw;
+    height: 20vw;
     max-width: 200px;
     max-height: 250px;
     transform-style: preserve-3d;
@@ -184,7 +184,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 4em;
-}
+} 
 
 sup {
     margin-left: -0.06em;
