@@ -1,23 +1,76 @@
-//SELECTORS
+//Selectors
 const tipsContainer = document.getElementById("tips-container")
 const closeContainer = document.getElementById("close-container")
 const cardContainer = document.getElementById("card-container")
 const controlsContainer = document.getElementById("controls-container")
 
 let cardFrontTemplate = [
-    `<div class="card view back" data-match="1"> 3 <sup> 2 </sup></div>`,
+     `<div class="card view back" data-match="1"> 3 <sup> 2 </sup></div>`,
     `<div class="card view back" data-match="1"> 9 </div>`,
-    `<div class="card view back" data-match="2"> 4 <sup> 1 </sup></div>`,
-    `<div class="card view back" data-match="2"> 4</div>`,
-    `<div class="card view back" data-match="3"> 3 <sup> 3 </sup></div>`,
-    `<div class="card view back" data-match="3"> 27 </div>`,
-    `<div class="card view back" data-match="4"> 1 <sup> 3 </sup></div>`,
-    `<div class="card view back" data-match="4"> 1 </div>`,
-    `<div class="card view back" data-match="5"> 7 <sup> 2 </sup></div>`,
-    `<div class="card view back" data-match="5"> 49 </div>`,
+     `<div class="card view back" data-match="2"> 4 <sup> 1 </sup></div>`,
+    `<div class="card view back" data-match="2"> 4 </div>`,
+     `<div class="card view back" data-match="3"> 3 <sup> 3 </sup></div>`,
+     `<div class="card view back" data-match="3"> 27 </div>`,
+     `<div class="card view back" data-match="4"> 1 <sup> 3 </sup></div>`,
+     `<div class="card view back" data-match="4"> 1 </div>`,
+     `<div class="card view back" data-match="5"> 7 <sup> 2 </sup></div>`,
+     `<div class="card view back" data-match="5"> 49 </div>`,
     `<div class="card view back" data-match="6"> 6 <sup> 2 </sup></div>`,
-    `<div class="card view back" data-match="6"> 36 </div>`
+     `<div class="card view back" data-match="6"> 36 </div>`
+ ]
+
+let mediumCardFrontTemplate = [
+    `<div class="card view back" data-match="1"> 3 <sup> -2 </sup></div>`,
+    `<div class="card view back" data-match="1"> 1 / 9 </div>`,
+    `<div class="card view back" data-match="2"> 5000 <sup> 0 </sup></div>`,
+    `<div class="card view back" data-match="2"> 1 </div>`,
+    `<div class="card view back" data-match="3"> 10 <sup> 3 </sup></div>`,
+    `<div class="card view back" data-match="3"> 1000 </div>`,
+    `<div class="card view back" data-match="4"> 2 <sup> (-2) <sup> 2 </sup></div>`,
+    `<div class="card view back" data-match="4"> 16 </div>`,
+    `<div class="card view back" data-match="5"> - 7 <sup> 2 </sup></div>`,
+    `<div class="card view back" data-match="5"> - 49 </div>`,
+    `<div class="card view back" data-match="6"> 2 <sup> 2 </sup> + 1 </div>`,
+    `<div class="card view back" data-match="6"> 5 </div>`
 ]
+
+
+
+
+// // Seviye seçeneklerini dinleyen fonksiyon
+// const memorySettingsGrid = document.getElementById("memory-settings-grid");
+// memorySettingsGrid.addEventListener("change", function() {
+//     const selectedLevel = memorySettingsGrid.value;
+//     if (selectedLevel === "Easy") {
+//         setMemoryLevel(cardFrontTemplate);
+//     } else if (selectedLevel === "Medium") {
+//         setMemoryLevel(mediumCardFrontTemplate);
+//     }
+// });
+
+// Butonun seçilmesi
+const button = document.getElementById("controls-container"); 
+
+// Butonun tıklanma olayının dinlenmesi
+button.addEventListener("click", function() {
+    // Butonun içeriğinin kontrol edilmesi
+    if (button.innerText === "Medium") {
+        // Eğer butonun içeriği "Medium" ise, belirli işlemleri yapabilirsiniz
+        // Örneğin, cardFrontTemplate'ı Medium seviyesi için ayarlayabilirsiniz
+        cardFrontTemplate = [
+            `<div class="card view back" data-match="1"> 3 <sup> 2 </sup></div>`,
+            `<div class="card view back" data-match="1"> 9 </div>`,
+            `<div class="card view back" data-match="2"> 4 <sup> 1 </sup></div>`,
+            `<div class="card view back" data-match="2"> 4</div>`,
+            `<div class="card view back" data-match="3"> 3 <sup> 3 </sup></div>`,
+            `<div class="card view back" data-match="3"> 27 </div>`,
+            `<div class="card view back" data-match="4"> 1 <sup> 3 </sup></div>`,
+            `<div class="card view back" data-match="4"> 1 </div>`
+        ];
+    }
+});
+
+
 
 //butonu seç const button = document....
 //if(button.innerText === "Medium"){ cardFrontTemplate = [.....]}
