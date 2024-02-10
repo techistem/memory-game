@@ -118,6 +118,8 @@ h3 {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+    height: 8vh;
+    
 }
 .controls-container {
     position: relative;
@@ -187,8 +189,8 @@ button:hover {
 } 
 
 sup {
-    margin-left: -0.06em;
-    vertical-align: super;
+    margin-left: -0.09em;
+    vertical-align: middle;
     line-height: 1.1;
     bottom: 15px;
     position: relative;
@@ -232,6 +234,7 @@ sup {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10vh;
 }
 
 @media screen and (max-width: 900px) {
