@@ -52,16 +52,21 @@ let mediumCardFrontTemplate = [
 
 
 
-// // Seviye seçeneklerini dinleyen fonksiyon
-// const memorySettingsGrid = document.getElementById("memory-settings-grid");
-// memorySettingsGrid.addEventListener("change", function() {
-//     const selectedLevel = memorySettingsGrid.value;
-//     if (selectedLevel === "Easy") {
-//         setMemoryLevel(cardFrontTemplate);
-//     } else if (selectedLevel === "Medium") {
-//         setMemoryLevel(mediumCardFrontTemplate);
-//     }
-// });
+//  Function that listens to level options
+const memorySettingsGrid = document.getElementById("memory-settings-grid");
+memorySettingsGrid.addEventListener("change", function () {
+    const templateToUse = memorySettingsGrid.value;
+    if (templateToUse === "Easy") {
+        templateToUse(cardFrontTemplate);
+    } else if (templateToUse === "Medium") {
+        templateToUse(mediumCardFrontTemplate);
+
+    }
+});
+function templateToUse(template) {
+    console.log("Selected:", template);
+
+}//
 
 // // Butonun seçilmesi
 // const button = document.getElementById("controls-container"); 
@@ -136,15 +141,6 @@ for (let i = 0; i < cardArray.length; i++) {
         const newCard = document.createElement("div");
         newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
         newCard.classList.add("front", "view", "card");
-
-
-        // //newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
-        // newCard.classList.remove("back"); // back'i siliyor
-        // newCard.classList.add("front", "view", "card"); // view ve card eklemene tekrar gerek yok
-        // `<div class="card view xx<back>xx front" data-match="1"> 3 <sup> 2 </sup></div>`,
-        // // card view back hep ekli
-
-
         const selectedCard = event.currentTarget;
         selectedCard.innerHTML = "";
         selectedCard.append(newCard);
