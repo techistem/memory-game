@@ -88,15 +88,19 @@ function shuffleCards() {
 //Card front view
 const cardArray = document.querySelectorAll(".card");
 for (let i = 0; i < cardArray.length; i++) {
+    
     cardArray[i].addEventListener("click", function (event) {
         const newCard = document.createElement("div");
         newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
-        newCard.classList.add("front", "view", "card");
+        newCard.classList.add("front","view", "card");
         const selectedCard = event.currentTarget;
-        selectedCard.innerHTML = "";
         selectedCard.append(newCard);
         //console.log(selectedCard);
+
+        cardEvents(newCard, selectedCard)
     });
+
+    return
 }
 
 
@@ -105,6 +109,29 @@ const restartBtn = document.getElementById("restart")
 restartBtn.addEventListener("click", function () {
     location.reload();
 });
+
+
+
+
+//Card Events
+function cardEvents(newCard, selectedCard) {
+    
+    //Is there an open card?
+    const openedCard = document.querySelectorAll(".open")
+    console.log(openedCard);
+
+    if(openedCard.length === 0) { //It means there are no open cards.
+        selectedCard.classList.add("open")
+
+        setTimeout(() => {
+        selectedCard.classList.remove("open")
+        newCard.remove()
+
+        }, 1500)
+    }
+    //We had a card that was opened before and we opened the one that was opened later.
+    selectedCard.classList.add("open")
+}
 
 
 

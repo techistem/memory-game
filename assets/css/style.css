@@ -247,3 +247,11 @@ sup {
         margin: 0px auto;
     }
 }
+
+.open {
+    border: 1px solid #fff;
+}
+
+.matched {
+    border: 1px solid green;
+}
