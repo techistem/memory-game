@@ -21,33 +21,33 @@ const controlsContainer = document.getElementById("controls-container")
 
 let cardFrontTemplate = [
     `<div class="card view" data-match="1"> 3 <sup> 2 </sup></div>`,
-   `<div class="card view" data-match="1"> 9 </div>`,
+    `<div class="card view" data-match="1"> 9 </div>`,
     `<div class="card view" data-match="2"> 4 <sup> 1 </sup></div>`,
-   `<div class="card view" data-match="2"> 4 </div>`,
+    `<div class="card view" data-match="2"> 4 </div>`,
     `<div class="card view" data-match="3"> 3 <sup> 3 </sup></div>`,
     `<div class="card view" data-match="3"> 27 </div>`,
     `<div class="card view" data-match="4"> 1 <sup> 3 </sup></div>`,
     `<div class="card view" data-match="4"> 1 </div>`,
     `<div class="card view" data-match="5"> 7 <sup> 2 </sup></div>`,
     `<div class="card view" data-match="5"> 49 </div>`,
-   `<div class="card view" data-match="6"> 6 <sup> 2 </sup></div>`,
+    `<div class="card view" data-match="6"> 6 <sup> 2 </sup></div>`,
     `<div class="card view" data-match="6"> 36 </div>`
 ]
 
-// let mediumCardFrontTemplate = [
-//     `<div class="card view back" data-match="1"> 3 <sup> -2 </sup></div>`,
-//     `<div class="card view back" data-match="1"> 1 / 9 </div>`,
-//     `<div class="card view back" data-match="2"> 5000 <sup> 0 </sup></div>`,
-//     `<div class="card view back" data-match="2"> 1 </div>`,
-//     `<div class="card view back" data-match="3"> 10 <sup> 3 </sup></div>`,
-//     `<div class="card view back" data-match="3"> 1000 </div>`,
-//     `<div class="card view back" data-match="4"> 2 <sup> (-2) <sup> 2 </sup></div>`,
-//     `<div class="card view back" data-match="4"> 16 </div>`,
-//     `<div class="card view back" data-match="5"> - 7 <sup> 2 </sup></div>`,
-//     `<div class="card view back" data-match="5"> - 49 </div>`,
-//     `<div class="card view back" data-match="6"> 2 <sup> 2 </sup> + 1 </div>`,
-//     `<div class="card view back" data-match="6"> 5 </div>`
-// ]
+let mediumCardFrontTemplate = [
+    `<div class="card view back" data-match="1"> 3 <sup> -2 </sup></div>`,
+    `<div class="card view back" data-match="1"> 1 / 9 </div>`,
+    `<div class="card view back" data-match="2"> 5000 <sup> 0 </sup></div>`,
+    `<div class="card view back" data-match="2"> 1 </div>`,
+    `<div class="card view back" data-match="3"> 10 <sup> 3 </sup></div>`,
+    `<div class="card view back" data-match="3"> 1000 </div>`,
+    `<div class="card view back" data-match="4"> 2 <sup> (-2) <sup> 2 </sup></div>`,
+    `<div class="card view back" data-match="4"> 16 </div>`,
+    `<div class="card view back" data-match="5"> - 7 <sup> 2 </sup></div>`,
+    `<div class="card view back" data-match="5"> - 49 </div>`,
+    `<div class="card view back" data-match="6"> 2 <sup> 2 </sup> + 1 </div>`,
+    `<div class="card view back" data-match="6"> 5 </div>`
+]
 
 
 
@@ -132,18 +132,18 @@ function shuffleCards() {
 //Card front view
 const cardArray = document.querySelectorAll(".card");
 for (let i = 0; i < cardArray.length; i++) {
-    cardArray[i].addEventListener("click", function(event) {
+    cardArray[i].addEventListener("click", function (event) {
         const newCard = document.createElement("div");
         newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
         newCard.classList.add("front", "view", "card");
-        
+
 
         // //newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
         // newCard.classList.remove("back"); // back'i siliyor
         // newCard.classList.add("front", "view", "card"); // view ve card eklemene tekrar gerek yok
         // `<div class="card view xx<back>xx front" data-match="1"> 3 <sup> 2 </sup></div>`,
         // // card view back hep ekli
-        
+
 
         const selectedCard = event.currentTarget;
         selectedCard.innerHTML = "";
