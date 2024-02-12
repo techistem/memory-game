@@ -47,6 +47,12 @@ memorySettingsGrid.addEventListener("change", function () {
     }
 });
 
+// Restart Button
+const restartBtn = document.getElementById("restart")
+restartBtn.addEventListener("click", function () {
+    location.reload();
+});
+
 const tipsBtn = document.getElementById("tips-btn")
 tipsBtn.addEventListener("click", function () {
     tipsContainer.classList.remove("hide")
@@ -74,7 +80,6 @@ startBtn.addEventListener("click", function () {
 for (let i = 0; i < 12; i++) {
     const divEl = document.createElement("div") //node element
     divEl.classList.add("card", "view", "back")
-    divEl.dataset.card = i;
     divEl.innerText = "?"
     cardContainer.append(divEl)
 }
@@ -86,68 +91,74 @@ function shuffleCards() {
     });
 }
 
-// flip card event listener
+//Card front view
 const cardArray = document.querySelectorAll(".card");
-for (let i = 0; i < cardArray.length; i++) {
-    cardArray[i].addEventListener("click", (event) => {
+    for (let i = 0; i < cardArray.length; i++) {
+
+    cardArray[i].addEventListener("click", function(){
         const newCard = document.createElement("div");
         newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
         newCard.classList.add("front", "view", "card");
         const selectedCard = event.currentTarget;
         selectedCard.append(newCard);
-        checkCards(newCard, cardArray[i])
-    });
+        console.log(selectedCard);
+
+        cardEvents(newCard, selectedCard)
+    }); 
+    
 }
 
 
-let cardsFlipped = []
+// Card Events
+function cardEvents(newCard, selectedCard) {
 
-function checkCards(cardFront, cardBack) {
-    const cardMatch = cardFront.querySelector('span').dataset.match;
-    const cardBackNumber = cardBack.dataset.card;
+    //Is there an open card?
+    const openedCard = document.querySelectorAll(".open")
+    console.log(openedCard);
 
-    if (cardsFlipped.length == 0) {
-        cardsFlipped.push({cardFront, cardBack, cardMatch, cardBackNumber});
+    //If the opened card is clicked again, no action will be taken.
+    if (selectedCard.classList.contains('open') === true){
+        selectedCard.removeEventListener("click", cardEvents) 
     }
+    
+    if (openedCard.length === 0) { //It means there are no open cards.
+        selectedCard.classList.add("open")
+    } else {
+        selectedCard.classList.add("open")
+    }
+    
+    let timeoutID = setTimeout(() => {
+        setTimeout(() => {
+            selectedCard.classList.remove("open")
+            newCard.remove()
+        })
+    }, 1500); 
+    
+    //We had a card that was opened before and we opened the one that was opened later.
 
-    if (cardsFlipped.length == 1) {
-        if (cardsFlipped[0].cardBack === cardBack) {
-            if (cardBack.children.length > 1) {
-                cardFront.remove();           
-            }
-            return;             
-        }
-        else {
-            cardsFlipped.push({cardFront, cardBack, cardMatch, cardBackNumber});
-        }
-    };
+    //Are the data-matches of the opened cards equal?
+    const firstCard = document.querySelectorAll("span")[1]
+    const secondCard = document.querySelectorAll("span")[2]
+    
+    if (openedCard.length !== 0 && firstCard.dataset.match === secondCard.dataset.match) {
 
-    if (cardsFlipped.length == 2) {
-        // game is won, dont unflip
-        console.log("match 1 = ", cardsFlipped[0].cardMatch, " / match 2 = ", cardsFlipped[1].cardMatch)
-        if (cardsFlipped[0].cardMatch == cardsFlipped[1].cardMatch) {
-            cardsFlipped[0].cardBack.pointerEvents = 'none';
-            cardsFlipped[1].cardBack.pointerEvents = 'none';
-            cardsFlipped = [];
-        }
-        // unflip cards
-        else {
-            // reset array
-            setTimeout(() => {
-                cardsFlipped[0].cardFront.remove()
-                cardsFlipped[1].cardFront.remove()
-                cardsFlipped = [];
-            }, 1000)
-        }
+        console.log(firstCard.dataset.match, secondCard.dataset.match )
+        firstCard.classList.add("matched")
+        secondCard.classList.add("matched")
+
+        firstCard.classList.remove("open")
+        secondCard.classList.remove("open")
+
+        clearTimeout(timeoutID)
+        
+
+        setTimeout(() => {
+            firstCard.removeEventListener("click", cardEvents)
+            secondCard.removeEventListener("click", cardEvents)
+        },1000)
     }
 }
 
-
-// Restart Button
-const restartBtn = document.getElementById("restart")
-restartBtn.addEventListener("click", function () {
-    location.reload();
-});
 
 
 

@@ -171,7 +171,7 @@ button:hover {
 } 
 
 
- .card {
+ .card, .card-front {
     text-align: center;
     position: relative;
     width: 15vw;
