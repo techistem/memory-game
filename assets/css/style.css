@@ -250,8 +250,9 @@ sup {
 
 .open {
     border: 1px solid #fff;
+    transform: scale(0.98);
 }
 
-.matched {
+.matched { /* opacity azcık */
     border: 1px solid green;
 }
