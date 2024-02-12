@@ -133,11 +133,17 @@ function checkCards(cardFront, cardBack) {
         // unflip cards
         else {
             // reset array
-            setTimeout(() => {
+          /*   setTimeout(() => {
                 cardsFlipped[0].cardFront.remove()
                 cardsFlipped[1].cardFront.remove()
                 cardsFlipped = [];
-            }, 1000)
+            }, 1000) */
+            setTimeout(() => {
+                cardsFlipped.forEach(({ cardFront }) => {
+                    cardFront.remove();
+                });
+                cardsFlipped = [];
+            }, 1000);
         }
     }
 }
