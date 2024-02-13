@@ -4,6 +4,7 @@ const closeContainer = document.getElementById("close-container")
 const cardContainer = document.getElementById("card-container")
 const controlsContainer = document.getElementById("controls-container")
 const flipsEl = document.querySelector(".flips")
+const timeEl = document.querySelector(".time")
 
 
 let cardFrontTemplate = [
@@ -67,7 +68,7 @@ startBtn.addEventListener("click", function () {
     results.classList.remove("hide")
     controlsContainer.classList.add("hide")
     header.classList.add("hide")
-
+    startTimer()
     shuffleCards();
 })
 
@@ -102,6 +103,8 @@ for (let i = 0; i < cardArray.length; i++) {
         //flips set
         flips++
         flipsEl.innerText = `Flips: ${flips}`
+
+      
         
     });
 }
@@ -113,7 +116,7 @@ let cardsFlipped = []
 function checkCards(cardFront, cardBack) {
     const cardMatch = cardFront.querySelector('span').dataset.match;
     const cardBackNumber = cardBack.dataset.card;
-
+    
     if (cardsFlipped.length == 0) {
         cardsFlipped.push({cardFront, cardBack, cardMatch, cardBackNumber});
     }
@@ -121,7 +124,7 @@ function checkCards(cardFront, cardBack) {
     if (cardsFlipped.length == 1) {
         if (cardsFlipped[0].cardBack === cardBack) {
             if (cardBack.children.length > 1) {
-                cardFront.remove();           
+               cardFront.remove();      
             }
             return;             
         }
@@ -142,21 +145,35 @@ function checkCards(cardFront, cardBack) {
         else {
             
             // reset array
-            /* setTimeout(() => {
+            setTimeout(() => {
                 cardsFlipped[0].cardFront.remove()
                 cardsFlipped[1].cardFront.remove()
                 cardsFlipped = [];
-            }, 1000) */
-            setTimeout(() => {
+            }, 1000)
+            /* setTimeout(() => {
                 cardsFlipped.forEach(({ cardFront }) => {
                     cardFront.remove();
                 });
                 cardsFlipped = [];
-            }, 1000);
+            }, 1000);  */
+          
         }
+        console.log(cardsFlipped);
     }
-   
+}
 
+//timer 
+let startTime
+function startTimer() {
+startTime = new Date()
+setInterval(updateTimer,1000)
+}
+
+function updateTimer() {
+    let currentTime = new Date()
+    let elapsedTime = currentTime - startTime
+    const seconds = Math.floor(elapsedTime / 1000)
+    timeEl.innerText = `Time: ${seconds}`
 }
 
 
@@ -164,7 +181,10 @@ function checkCards(cardFront, cardBack) {
 const restartBtn = document.getElementById("restart")
 restartBtn.addEventListener("click", function () {
     location.reload();
+    startTimer()
 });
+
+
 
 
 
