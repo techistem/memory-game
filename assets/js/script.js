@@ -3,6 +3,7 @@ const tipsContainer = document.getElementById("tips-container")
 const closeContainer = document.getElementById("close-container")
 const cardContainer = document.getElementById("card-container")
 const controlsContainer = document.getElementById("controls-container")
+const flipsEl = document.querySelector(".flips")
 
 
 let cardFrontTemplate = [
@@ -86,6 +87,8 @@ function shuffleCards() {
     });
 }
 
+let flips = 0
+
 // flip card event listener
 const cardArray = document.querySelectorAll(".card");
 for (let i = 0; i < cardArray.length; i++) {
@@ -96,11 +99,16 @@ for (let i = 0; i < cardArray.length; i++) {
         const selectedCard = event.currentTarget;
         selectedCard.append(newCard);
         checkCards(newCard, cardArray[i])
+        //flips set
+        flips++
+        flipsEl.innerText = `Flips: ${flips}`
+        
     });
 }
 
 
 let cardsFlipped = []
+
 
 function checkCards(cardFront, cardBack) {
     const cardMatch = cardFront.querySelector('span').dataset.match;
@@ -132,8 +140,9 @@ function checkCards(cardFront, cardBack) {
         }
         // unflip cards
         else {
+            
             // reset array
-          /*   setTimeout(() => {
+            /* setTimeout(() => {
                 cardsFlipped[0].cardFront.remove()
                 cardsFlipped[1].cardFront.remove()
                 cardsFlipped = [];
@@ -146,6 +155,8 @@ function checkCards(cardFront, cardBack) {
             }, 1000);
         }
     }
+   
+
 }
 
 
