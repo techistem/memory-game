@@ -170,10 +170,21 @@ setInterval(updateTimer,1000)
 }
 
 function updateTimer() {
-    let currentTime = new Date()
-    let elapsedTime = currentTime - startTime
-    const seconds = Math.floor(elapsedTime / 1000)
-    timeEl.innerText = `Time: ${seconds}`
+    let currentTime = new Date();
+    let elapsedTime = Math.floor((currentTime - startTime) / 1000); // Geçen süreyi saniye cinsinden hesapla
+    const minutes = Math.floor(elapsedTime / 60);
+    const seconds = elapsedTime % 60;
+    let formattedTime;
+
+    
+    if (elapsedTime >= 60) {
+        formattedTime = '01:00';
+    } else {
+        
+        formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+    }
+
+    timeEl.innerText = `Time: ${formattedTime}`; 
 }
 
 
