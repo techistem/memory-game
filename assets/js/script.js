@@ -1,10 +1,12 @@
-//Selectors
-const tipsContainer = document.getElementById("tips-container")
-const closeContainer = document.getElementById("close-container")
-const cardContainer = document.getElementById("card-container")
-const controlsContainer = document.getElementById("controls-container")
-const flipsEl = document.querySelector(".flips")
-const timeEl = document.querySelector(".time")
+//selectors
+const tipsContainer = document.getElementById("tips-container");
+const closeContainer = document.getElementById("close-container");
+const cardContainer = document.getElementById("card-container");
+const controlsContainer = document.getElementById("controls-container");
+const flipsEl = document.querySelector(".flips");
+const timeEl = document.querySelector(".time");
+let matches = 0;
+let flips = 0;
 
 
 let cardFrontTemplate = [
@@ -43,42 +45,42 @@ const memorySettingsGrid = document.getElementById("memory-settings-grid");
 
 memorySettingsGrid.addEventListener("change", function () {
     const templateToUse = memorySettingsGrid.value;
-    console.log("templateToUse:", templateToUse)
+    console.log("templateToUse:", templateToUse);
     if (templateToUse === "Medium") {
-        cardFrontTemplate = mediumCardFrontTemplate
+        cardFrontTemplate = mediumCardFrontTemplate;
     }
 });
 
-const tipsBtn = document.getElementById("tips-btn")
+const tipsBtn = document.getElementById("tips-btn");
 tipsBtn.addEventListener("click", function () {
-    tipsContainer.classList.remove("hide")
+    tipsContainer.classList.remove("hide");
     closeContainer.addEventListener("click", function () {
-        tipsContainer.classList.add("hide")
-    })
-})
+        tipsContainer.classList.add("hide");
+    });
+});
 
 // Game section view function
-const startBtn = document.getElementById("start")
-const header = document.querySelector(".head")
-const details = document.getElementById("details")
-const results = document.getElementById("results")
+const startBtn = document.getElementById("start");
+const header = document.querySelector(".head");
+const details = document.getElementById("details");
+const results = document.getElementById("results");
 startBtn.addEventListener("click", function () {
-    cardContainer.classList.remove("hide")
-    details.classList.remove("hide")
-    results.classList.remove("hide")
-    controlsContainer.classList.add("hide")
-    header.classList.add("hide")
-    startTimer()
+    cardContainer.classList.remove("hide");
+    details.classList.remove("hide");
+    results.classList.remove("hide");
+    controlsContainer.classList.add("hide");
+    header.classList.add("hide");
+    startTimer();
     shuffleCards();
-})
+});
 
 //Creating Cards(BACK)
 for (let i = 0; i < 12; i++) {
-    const divEl = document.createElement("div") //node element
-    divEl.classList.add("card", "view", "back")
+    const divEl = document.createElement("div"); //node element
+    divEl.classList.add("card", "view", "back");
     divEl.dataset.card = i;
-    divEl.innerText = "?"
-    cardContainer.append(divEl)
+    divEl.innerText = "?";
+    cardContainer.append(divEl);
 }
 
 // shuffle cards
@@ -88,100 +90,116 @@ function shuffleCards() {
     });
 }
 
-let flips = 0
-
 // flip card event listener
 const cardArray = document.querySelectorAll(".card");
 for (let i = 0; i < cardArray.length; i++) {
     cardArray[i].addEventListener("click", (event) => {
+        //disable the card being clicked/played
+        cardArray[i].classList.add("disable");
         const newCard = document.createElement("div");
         newCard.innerHTML = cardFrontTemplate[i % cardFrontTemplate.length]; // Use modulus operator to cycle through cardTemplate array
         newCard.classList.add("front", "view", "card");
         const selectedCard = event.currentTarget;
         selectedCard.append(newCard);
-        checkCards(newCard, cardArray[i])
+        checkCards(newCard, cardArray[i]);
         //flips set
-        flips++
-        flipsEl.innerText = `Flips: ${flips}`
+        flips++;
+        flipsEl.innerText = `Flips: ${flips}`;
     });
 }
 
 
-let cardsFlipped = []
+let cardsFlipped = [];
 
 
 function checkCards(cardFront, cardBack) {
     const cardMatch = cardFront.querySelector('span').dataset.match;
     const cardBackNumber = cardBack.dataset.card;
-    
+
     if (cardsFlipped.length == 0) {
-        cardsFlipped.push({cardFront, cardBack, cardMatch, cardBackNumber});
+        cardsFlipped.push({ cardFront, cardBack, cardMatch, cardBackNumber });
     }
 
     if (cardsFlipped.length == 1) {
         if (cardsFlipped[0].cardBack === cardBack) {
             if (cardBack.children.length > 1) {
-               cardFront.remove();      
+                cardFront.remove();
             }
-            return;             
+            return;
         }
         else {
-            cardsFlipped.push({cardFront, cardBack, cardMatch, cardBackNumber});
+            cardsFlipped.push({ cardFront, cardBack, cardMatch, cardBackNumber });
         }
-    };
+    }
 
     if (cardsFlipped.length == 2) {
+        //find all unmatched cards
+        let disabledCards = document.querySelectorAll(".card.view.back:not(.match)");
+        //temporarily disable other cards not currently being played
+        disabledCards.forEach(card => {
+            card.classList.add("disable");
+        });
+        
         // game is won, dont unflip
-        console.log("match 1 = ", cardsFlipped[0].cardMatch, " / match 2 = ", cardsFlipped[1].cardMatch)
         if (cardsFlipped[0].cardMatch == cardsFlipped[1].cardMatch) {
-            cardsFlipped[0].cardBack.pointerEvents = 'none';
-            cardsFlipped[1].cardBack.pointerEvents = 'none';
+            // add "match" class to permanently disable
+            cardsFlipped[0].cardBack.classList.add("match");
+            cardsFlipped[1].cardBack.classList.add("match");
             cardsFlipped = [];
+            // re-enable unmatched cards
+            disabledCards.forEach(card => {
+                card.classList.remove("disable");
+            });
+
+            //
+            matches += 1;
+            if (matches >= (cardArray.length / 2)) {
+                endGame();
+            }
         }
         // unflip cards
         else {
-            
-            // reset array
-            setTimeout(() => {
-                cardsFlipped[0].cardFront.remove()
-                cardsFlipped[1].cardFront.remove()
-                cardsFlipped = [];
-            }, 1000)
-            /* setTimeout(() => {
-                cardsFlipped.forEach(({ cardFront }) => {
-                    cardFront.remove();
-                });
-                cardsFlipped = [];
-            }, 1000);  */
-          
-        }
-        console.log(cardsFlipped);
-    }
+
+     // reset array
+     setTimeout(() => {
+        cardsFlipped[0].cardFront.remove();
+        cardsFlipped[1].cardFront.remove();
+        cardsFlipped = [];
+        // re-enable unmatched cards
+        disabledCards.forEach(card => {
+            card.classList.remove("disable");
+        });
+    }, 1000);
+}
+}
 }
 
+
+
 //timer 
-let startTime
+let startTime;
+let timer;
 function startTimer() {
-startTime = new Date()
-setInterval(updateTimer,1000)
+    startTime = new Date();
+    timer = setInterval(updateTimer, 1000);
 }
 
 function updateTimer() {
     let currentTime = new Date();
-    let elapsedTime = Math.floor((currentTime - startTime) / 1000); // Geçen süreyi saniye cinsinden hesapla
+    let elapsedTime = Math.floor((currentTime - startTime) / 1000); // Calculate elapsed time in seconds
     const minutes = Math.floor(elapsedTime / 60);
     const seconds = elapsedTime % 60;
     let formattedTime;
 
-    
+
     if (elapsedTime >= 60) {
         formattedTime = '01:00';
     } else {
-        
+
         formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
     }
 
-    timeEl.innerText = `Time: ${formattedTime}`; 
+    timeEl.innerText = `Time: ${formattedTime}`;
 }
 
 
@@ -191,6 +209,13 @@ restartBtn.addEventListener("click", function () {
     location.reload();
     startTimer()
 });
+
+function endGame() {
+    clearInterval(timer);
+    setTimeout(() => {
+        alert("You found all matches!");
+    }, 500);
+}
 
 
 
