@@ -103,9 +103,6 @@ for (let i = 0; i < cardArray.length; i++) {
         //flips set
         flips++
         flipsEl.innerText = `Flips: ${flips}`
-
-      
-        
     });
 }
 
@@ -194,6 +191,7 @@ restartBtn.addEventListener("click", function () {
     location.reload();
     startTimer()
 });
+
 
 
 

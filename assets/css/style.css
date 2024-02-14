@@ -59,7 +59,7 @@ header a {
     width: 70%;
     border: 3px solid #94c4c7;
     padding: 10px 5px;
-    line-height: 40px;
+    line-height: 1.3em;
     position: fixed;
     z-index: 20;
     top: 50%;
@@ -94,13 +94,11 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 #memory-settings-grid,
 #tips-btn,
 #start {
-    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -119,8 +117,9 @@ h3 {
     justify-content: space-evenly;
     flex-direction: row;
     height: 8vh;
-    
+
 }
+
 .controls-container {
     position: relative;
     display: flex;
@@ -137,7 +136,6 @@ h3 {
 }
 
 #memory-settings-grid {
-    margin-bottom: 16px;
     font-size: 18px;
     background: orange;
     color: white;
@@ -162,16 +160,17 @@ button:hover {
 
 /* Game Styles */
 
- #card-container {
+#card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 
 
-} 
+}
 
 
- .card, .card-front {
+.card,
+.card-front {
     text-align: center;
     position: relative;
     width: 15vw;
@@ -186,7 +185,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 4em;
-} 
+}
 
 sup {
     margin-left: -0.09em;
@@ -194,7 +193,7 @@ sup {
     line-height: 1.1;
     bottom: 15px;
     position: relative;
-   
+
 }
 
 
@@ -221,9 +220,8 @@ sup {
 .back {
     background-color: #c794a8;
     border: 2px white;
-     /* transform: rotateY(180deg);  */
+    /* transform: rotateY(180deg);  */
 }
-
 
 .hide {
     display: none !important;
@@ -237,7 +235,9 @@ sup {
     height: 10vh;
 }
 
-@media screen and (max-width: 900px) {
+/* Media queries */
+
+@media screen and (min-width: 900px) {
     .game-container {
         position: absolute;
         left: 50%;
@@ -246,6 +246,13 @@ sup {
         max-width: 800px;
         margin: 0px auto;
     }
+
+    #memory-settings-grid,
+    #tips-btn,
+    #start {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 .open {
@@ -253,6 +260,41 @@ sup {
     transform: scale(0.98);
 }
 
-.matched { /* opacity azcık */
+.matched {
+    /* opacity azcık */
     border: 1px solid green;
 }
+
+@media screen and (max-width: 900px) {
+    #tips-container {
+        width: 100%;
+        height: 90%;
+    }
+
+    .head {
+        font-size: 22px;
+        padding: 1.5em 2em;
+    }
+
+    .logo {
+        padding: 0.5em;
+        padding: 0.1em 0.5em;
+        font-size: 18px;
+    }
+
+    .btn-container {
+        width: 150px;
+    }
+
+    #tips-btn,
+    #memory-setting-grid,
+    #start {
+        display: block;
+        margin: 10px auto;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}
+
