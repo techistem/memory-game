@@ -25,18 +25,18 @@ let cardFrontTemplate = [
 ]
 
 let mediumCardFrontTemplate = [
-    `<div class="card view" data-match="1"> 3 <sup> -2 </sup></div>`,
-    `<div class="card view" data-match="1"> 1 / 9 </div>`,
-    `<div class="card view" data-match="2"> 5000 <sup> 0 </sup></div>`,
-    `<div class="card view" data-match="2"> 1 </div>`,
-    `<div class="card view" data-match="3"> 10 <sup> 3 </sup></div>`,
-    `<div class="card view" data-match="3"> 1000 </div>`,
-    `<div class="card view" data-match="4"> 2 <sup> (-2) <sup> 2 </sup></div>`,
-    `<div class="card view" data-match="4"> 16 </div>`,
-    `<div class="card view" data-match="5"> - 7 <sup> 2 </sup></div>`,
-    `<div class="card view" data-match="5"> - 49 </div>`,
-    `<div class="card view" data-match="6"> 2 <sup> 2 </sup> + 1 </div>`,
-    `<div class="card view" data-match="6"> 5 </div>`
+    `<span class="card view" data-match="2"> 5000 <sup> 0 </sup></span>`,
+    `<span class="card view" data-match="1"> 3 <sup> -2 </sup></span>`,
+    `<span class="card view" data-match="2"> 1 </span>`,
+    `<span class="card view" data-match="3"> 10 <sup> 3 </sup></span>`,
+    `<span class="card view" data-match="3"> 1000 </span>`,
+    `<span class="card view" data-match="1"> 1 / 9 </span>`,
+    `<span class="card view" data-match="4"> 2 <sup> (-2) <sup> 2 </sup></span>`,
+    `<span class="card view" data-match="4"> 16 </span>`,
+    `<span class="card view" data-match="5"> - 7 <sup> 2 </sup></span>`,
+    `<span class="card view" data-match="5"> - 49 </span>`,
+    `<span class="card view" data-match="6"> 2 <sup> 2 </sup> + 1 </span>`,
+    `<span class="card view" data-match="6"> 5 </span>`
 ]
 
 //  Function that listens to level options
