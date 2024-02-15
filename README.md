@@ -20,6 +20,10 @@ This game requires challenging yourself.
 - To be able to restart the game at any point while I am playing the game
 ## Design
 ### Wireframes
+Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure and overall design of each page of the game.
+<details><summary>Home page wireframe</summary>
+
+
 
 
 
