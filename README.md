@@ -32,6 +32,19 @@ Balsamiq wireframes were created for mobile, tablet and desktop devices to show 
 
 
 ### Colour Scheme
+Inspired by the flowing numbers in the movie 'The Matrix', the background color and the appropriate color were chosen. Green color is a color that is eye-catching and eye-catching.
+### Typography
+'Orbitron' was used as the font style. It is an interesting writing style for the game page. And it does not tire the eyes.
+## Features
+This game is designed to be both fun and easy to use. In this way, it is a very fun game for classroom activities and for students to review the subject. The features implemented throughout the game support this goal.
+### Home page
+-  This is what the user will be greeted with upon opening the game, and also what they will return to any time they click a button to return Home.
+- It is an easy to navigate Home page, with the title of the quiz at the top, and 3 buttons below:
+    
+    - A Play button to start the quiz
+    - A How to play button to take the user to the rules of the game
+    - A High Scores button to take the user to the high scores page
+
 
 
 
