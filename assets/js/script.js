@@ -139,7 +139,7 @@ function checkCards(cardFront, cardBack) {
         disabledCards.forEach(card => {
             card.classList.add("disable");
         });
-        
+
         // game is won, dont unflip
         if (cardsFlipped[0].cardMatch == cardsFlipped[1].cardMatch) {
             // add "match" class to permanently disable
@@ -160,18 +160,18 @@ function checkCards(cardFront, cardBack) {
         // unflip cards
         else {
 
-     // reset array
-     setTimeout(() => {
-        cardsFlipped[0].cardFront.remove();
-        cardsFlipped[1].cardFront.remove();
-        cardsFlipped = [];
-        // re-enable unmatched cards
-        disabledCards.forEach(card => {
-            card.classList.remove("disable");
-        });
-    }, 1000);
-}
-}
+            // reset array
+            setTimeout(() => {
+                cardsFlipped[0].cardFront.remove();
+                cardsFlipped[1].cardFront.remove();
+                cardsFlipped = [];
+                // re-enable unmatched cards
+                disabledCards.forEach(card => {
+                    card.classList.remove("disable");
+                });
+            }, 1000);
+        }
+    }
 }
 
 

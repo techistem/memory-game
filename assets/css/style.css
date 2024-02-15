@@ -156,13 +156,10 @@ button {
 
 
 /* Game Styles */
-
 #card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-
-
+    gap: 10px; 
 }
 
 
@@ -190,6 +187,7 @@ sup {
     line-height: 1.1;
     bottom: 15px;
     position: relative;
+    font-size: smaller;
 
 }
 
@@ -202,7 +200,7 @@ sup {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: xxx-large;
+    font-size: 60px;
     color: white;
     border-radius: 10px;
 
@@ -217,7 +215,7 @@ sup {
 .back {
     background-color: #c794a8;
     border: 2px white;
-    /* transform: rotateY(180deg);  */
+  
 }
 
 .hide {
@@ -261,6 +259,7 @@ sup {
     /* opacity azcık */
     border: 1px solid green;
 }
+
 
 @media screen and (max-width: 900px) {
     #tips-container {
