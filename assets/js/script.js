@@ -25,7 +25,7 @@ let cardFrontTemplate = [
 ]
 
 let mediumCardFrontTemplate = [
-    `<span class="card view" data-match="2"> 5000 <sup> 0 </sup></span>`,
+    `<span class="card view" data-match="2"> 50 <sup> 0 </sup></span>`,
     `<span class="card view" data-match="1"> 3 <sup> -2 </sup></span>`,
     `<span class="card view" data-match="2"> 1 </span>`,
     `<span class="card view" data-match="3"> 10 <sup> 3 </sup></span>`,
