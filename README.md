@@ -22,6 +22,8 @@ This game requires challenging yourself.
 ### Wireframes
 Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure and overall design of each page of the game.
 <details><summary>Home page wireframe</summary>
+![Home page wireframe](docs/wireframes/Homepage.png)
+</details>
 
 
 
