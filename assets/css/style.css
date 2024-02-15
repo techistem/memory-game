@@ -98,12 +98,12 @@ h3 {
 #start {
     width: 100%;
 }
-
+#memory-settings-grid:hover,
+#tips-btn:hover,
+#start:hover {
+    background-color: #0056b3;
+}
 .game-container {
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
     max-width: 800px;
     margin: 10px auto;
 }
@@ -114,7 +114,9 @@ h3 {
     justify-content: space-evenly;
     flex-direction: row;
     height: 8vh;
-
+}
+#restart:hover {
+    background-color: #0056b3;
 }
 
 .controls-container {
@@ -132,7 +134,7 @@ h3 {
 }
 
 #memory-settings-grid {
-    font-size: 18px;
+    font-size: 16px;
     background: rgb(13, 0, 255);
     color: white;
     height: 50px;
@@ -151,9 +153,7 @@ button {
     color: #fff;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
+
 
 /* Game Styles */
 
