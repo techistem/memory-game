@@ -45,6 +45,16 @@ This game is designed to be both fun and easy to use. In this way, it is a very 
     - A How to play button to take the user to the rules of the game
     - A High Scores button to take the user to the high scores page
 
+<details><summary>Desktop home page</summary>
+
+![Desktop home page](docs/features/home-page-desktop.png)
+</details>
+<details><summary>Mobile home page</summary>
+
+![Mobile home page](docs/features/home-page-mobile.png)
+</details>
+
+
 
 
 
