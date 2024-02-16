@@ -39,9 +39,9 @@ Inspired by the flowing numbers in the movie 'The Matrix', the background color 
 This game is designed to be both fun and easy to use. In this way, it is a very fun game for classroom activities and for students to review the subject. The features implemented throughout the game support this goal.
 ### Home page
 -  This is what the user will be greeted with upon opening the game, and also what they will return to any time they click a button to return Home.
-- It is an easy to navigate Home page, with the title of the quiz at the top, and 3 buttons below:
+- It is an easy to navigate Home page, with the title of the game at the top, and 3 buttons below:
     
-    - A Play button to start the quiz
+    - A Play button to start the game
     - A How to play button to take the user to the rules of the game
     - A High Scores button to take the user to the high scores page
 
@@ -60,7 +60,7 @@ This game is designed to be both fun and easy to use. In this way, it is a very 
 
 <details><summary>Desktop tips section</summary>
 
-![Desktop tips section](ddocs/features/tips-desktop.png)
+![Desktop tips section](docs/features/tips-desktop.png)
 </details>
 <details><summary>Mobile tips section</summary>
 
@@ -68,8 +68,23 @@ This game is designed to be both fun and easy to use. In this way, it is a very 
 </details>
 
 ### Game section
+- When the user selects either 'Easy' or 'Medium', 12 cards will appear 
+on the screen. When he clicks on one of these cards, he will try to 
+find the card corresponding to the value of the number he encounters.
+- Starting from 12 cards, matching cards 2 at a time will work. 
+If you want to exit the game or move to the next level, there is a 
+'Restart' button at the bottom.
 
+<details><summary>Desktop game section</summary>
 
+![Desktop game section](docs/features/game-section-desktop.png)
+</details>
+<details><summary>Mobile game section</summary>
+
+![Mobile game page](docs/features/game-section-mobile.png)
+</details>
+
+- If the user cannot find the 2nd card with the correct value, the cards will be returned.
 
 
 
