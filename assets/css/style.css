@@ -30,9 +30,14 @@ header a {
     padding: 0.2em 1em;
 }
 
+.btn-container button,
+.btn-container select {
+    margin-bottom: 20px; 
+}
+
 .head {
     text-align: center;
-    padding: 2.5em 3em;
+    padding: 0.5em 5em;
     font-family: 'Orbitron', sans-serif;
     font-size: 30px;
     text-shadow: 2px 2px orange;
@@ -78,8 +83,6 @@ header a {
     font-size: 1.4rem;
 }
 
-
-
 h3 {
     color: red;
     text-align: center;
@@ -115,6 +118,7 @@ h3 {
     flex-direction: row;
     height: 5vh;
 }
+
 #restart:hover {
     background-color: #0056b3;
 }
@@ -153,8 +157,6 @@ button {
     color: #fff;
 }
 
-
-
 /* Game Styles */
 #card-container {
     display: grid;
@@ -189,7 +191,6 @@ sup {
     position: relative;
     font-size: smaller;
 }
-
 
 .card .view {
     position: absolute;
@@ -256,7 +257,6 @@ sup {
 .matched {
     border: 1px solid green;
 }
-
 
 @media screen and (max-width: 425px) {
     #tips-container {
