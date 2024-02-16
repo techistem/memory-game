@@ -169,7 +169,7 @@ If you want to exit the game or move to the next level, there is a
 ![Wave results](docs/testing/lighthouse-mobile.png)
 </details>
 
-## Testing User Stories
+### Testing User Stories
 - Expectation: Learning a mathematics subject in a fun and interactive way
     - Result: Thanks to 2 levels of difficulty, the site is an interesting way 
 to test the user's knowledge. 
@@ -179,6 +179,13 @@ to test the user's knowledge.
     - Result: In the Tips section, the game is explained with an example on how to play the game.
 - Expectation: To easily navigate the site and to have a way to return to the Home page at any point of the quiz.
     - Result: There is a 'Restart' button at the bottom of the cards to return to the home page.
+### Solved Bugs
+- The cards were not shuffled every time the start button was clicked.
+    - Fixed this by adding an event listener that triggered the shuffling function when the start button was clicked.
+- When Exponents were placed in the 'div' element in HTML, they could not be activated with JS.
+    - The `cardFrontTemplate` variable is created to contain an array containing the HTML structure of each card.
+- 7<sup>2</sup> The numbers, created in the form  covered the surface of the cards.
+    - Transform property was used in CSS. CSS style adjustments were made according to different screens.
 
 
 
