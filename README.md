@@ -157,5 +157,17 @@ If you want to exit the game or move to the next level, there is a
         
         ![script.js validator](docs/testing/jshint-scripts.js.png)
 
+### Lighthouse Testing
+- Lighthouse testing was carried out to test the performance, accessibility, best practices and SEO of the quiz on both a desktop and mobile device.
+<details><summary>Desktop lighthouse scores</summary>
+
+![Wave results](docs/testing/lighthouse-desktop.png)
+</details>
+
+<details><summary>Mobile lighthouse scores</summary>
+
+![Wave results](docs/testing/lighthouse-mobile.png)
+</details>
+
 
 
