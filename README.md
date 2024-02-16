@@ -196,7 +196,7 @@ to test the user's knowledge.
 ### Media
 - The background image is from [Pixabay](Image by <a href="https://pixabay.com/users/51581-51581/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=356024">51581</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=356024">Pixabay</a>).
 ### Code
-
+- The cards were not working properly. Each clicked card did not close and remained open on the screen. So function checkCards(cardFront, cardBack){ . I received tutor and installer support while doing the part. You helped me edit this part.
 
 
 
