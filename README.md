@@ -187,6 +187,17 @@ to test the user's knowledge.
 - 7<sup>2</sup> The numbers, created in the form  covered the surface of the cards.
     - Transform property was used in CSS. CSS style adjustments were made according to different screens.
 
+## Credits
+### Content
+- The questions and solutions of the game were written by myself.
+- The fonts were chosen with [Google Font](https://fonts.google.com/).
+- The logo was designed by myself using [Canva](https://www.canva.com/).
+- The favicon is from [Favicon](https://favicon.io/).
+### Media
+- The background image is from [Pixabay](Image by <a href="https://pixabay.com/users/51581-51581/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=356024">51581</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=356024">Pixabay</a>).
+### Code
+
+
 
 
 
