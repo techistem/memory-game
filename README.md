@@ -54,17 +54,17 @@ This game is designed to be both fun and easy to use. In this way, it is a very 
 ![Mobile home page](docs/features/home-page-mobile.png)
 </details>
 
-### How to play section/TIPSSS
+### Tips
 - Tips section gives the user brief information about how to play the game with an example.
 - There is also a Restart button at the bottom to allow the user to return to the Home page.
 
 <details><summary>Desktop tips section</summary>
 
-![Desktop tips section]()
+![Desktop tips section](ddocs/features/tips-desktop.png)
 </details>
-<details><summary>Mobile how to play section</summary>
+<details><summary>Mobile tips section</summary>
 
-![Mobile how to play section]()
+![Mobile how to play section](docs/features/tips-mobile.png)
 </details>
 
 ### Game section
