@@ -61,12 +61,12 @@
     <!--Button section-->
     <div id="controls-container" class="controls-container">
         <div id="btn-container" class="btn-container">
-            <button id="tips-btn">TIPS</button>
+            <button id="tips-btn" aria-labels="Tips">TIPS</button>
             <select id="memory-settings-grid" aria-label="memory-settings-game" name="template-to-use">
                 <option value="Easy" selected>EASY</option>
                 <option value="Medium">MEDIUM</option>
             </select>
-            <button id="start">START</button>
+            <button id="start" aria-label="Start">START</button>
         </div>
     </div>
 
@@ -78,9 +78,8 @@
     <div class="game-container">
         <div id="card-container" class="hide"></div>
         <section id="results" class="hide">
-            <h2>Restart</h2>
             <div id="win">
-                <button id="restart">RESTART</button>
+                <button id="restart" aria-label="Restart">RESTART</button>
             </div>
 
         </section>

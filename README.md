@@ -143,7 +143,19 @@ If you want to exit the game or move to the next level, there is a
 </details>
 
 ### Validator Testing
+- HTML
+    - No errors were found when the index.html page was passed through the [W3C HTML validator](https://validator.w3.org/).
+    ![index.html validator](docs/testing/html-validator.png)
+- CSS
+    - No errors were found when the quiz was passed through the [W3C CSS validator](https://jigsaw.w3.org/css-validator/).
+    ![css validator](docs/testing/css-validator.png)
+- JavaScript
+    
+    - No errors were found when either of the JavaScript pages were passed through the [JSHint validator](https://jshint.com/).
 
+    - script.js validator:
+        
+        ![script.js validator](docs/testing/jshint-scripts.js.png)
 
 
 
