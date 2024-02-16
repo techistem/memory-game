@@ -101,6 +101,17 @@ If you want to exit the game or move to the next level, there is a
 ![End Game Message](docs/features/end-game-msj.png)
 </details>
 
+### Future Features
+- I would also like to add the hard level to the game to allow the user to choose between easy, medium and hard questions. Because I believe that the difficulty level will give the user a different experience. He/she will be able to fill in the knowledge gap with more difficult questions.
+
+- I would like to add more questions to avoid repeating the questions of each section. The user will thus be excited as if completing the puzzle.
+
+- Sound effects or end-of-level celebration animations will make the game more attractive for the user. For example, there may be a sound effect when the user clicks on the wrong card.
+
+- A more comprehensive game in which students can compete as a team in the classroom will enable students to participate more actively in lessons and work as a team.And a leaderboard can be made to list the teams.
+
+- I would like to set a timer that counts down. In this way, they learn attention, concentration and coping with stress.
+
 
 
 
