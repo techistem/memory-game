@@ -169,5 +169,18 @@ If you want to exit the game or move to the next level, there is a
 ![Wave results](docs/testing/lighthouse-mobile.png)
 </details>
 
+## Testing User Stories
+- Expectation: Learning a mathematics subject in a fun and interactive way
+    - Result: Thanks to 2 levels of difficulty, the site is an interesting way 
+to test the user's knowledge. 
+- Expectation: The user must complete the game in the shortest time with the fewest moves.
+    - Result: Due to the users' level of knowledge, their inability to concentrate, etc., the time to complete the task and the number of times they clicked on the cards varied.
+- Expectation: Having clear instructions on how to play the game
+    - Result: In the Tips section, the game is explained with an example on how to play the game.
+- Expectation: To easily navigate the site and to have a way to return to the Home page at any point of the quiz.
+    - Result: There is a 'Restart' button at the bottom of the cards to return to the home page.
+
+
+
 
 
