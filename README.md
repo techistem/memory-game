@@ -112,6 +112,35 @@ If you want to exit the game or move to the next level, there is a
 
 - I would like to set a timer that counts down. In this way, they learn attention, concentration and coping with stress.
 
+## Technologies
+- HTML
+    - Used to create the structure of the game
+- CSS
+    - Used to implement styling across the game
+- JavaScript
+    - Used to create interactivity throughout the game
+- Gitpod
+    - Used to develop and edit the code
+- Git
+    - Used to add, commit and push the code
+- GitHub
+  - Used to store and deploy the 
+- [Balsamiq](https://balsamiq.com/)
+    - Used to create wireframes
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import fonts
+- [Favicon](https://favicon.io/)
+    - Used to create a favicon  
+## Testing
+### Responsiveness
+- The website has been tested on Chrome, Edge and Firefox as well as on an iPhone 15/14, iPhone 13 mini, Samsung Galaxy S22, and iPad 6th Generation in order to check the responsiveness on different devices and different browsers.
+- Each section of the quiz was also tested on the [Responsive Design Checker website](https://responsivedesignchecker.com/), and on Chrome and Firefox developer tools, to ensure that the quiz is responsive on a range of mobile, tablet and desktop devices.
+### Accessibility
+- [Wave accessibility tool](https://wave.webaim.org/) was used to check how accessible the quiz is. No errors were found, and the only alert mentioned that there were no page regions found on the site. Given that this website is a quiz game, it was not necessary to have regions like a header, nav bar or footer, as the entire body of the quiz is contained within the purple section in the centre of the page.
+<details><summary>Wave results</summary>
+
+![Wave results](docs/testing/wave.png)
+</details>
 
 
 
