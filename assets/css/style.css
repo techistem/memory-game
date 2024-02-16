@@ -113,7 +113,7 @@ h3 {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    height: 8vh;
+    height: 5vh;
 }
 #restart:hover {
     background-color: #0056b3;
@@ -168,7 +168,7 @@ button {
     text-align: center;
     position: relative;
     width: 15vw;
-    height: 20vw;
+    height: 200px;
     max-width: 200px;
     max-height: 250px;
     transform-style: preserve-3d;
@@ -188,7 +188,6 @@ sup {
     bottom: 15px;
     position: relative;
     font-size: smaller;
-
 }
 
 
@@ -203,7 +202,6 @@ sup {
     font-size: xx-large;
     color: white;
     border-radius: 10px;
-
 }
 
 .front {
@@ -232,7 +230,7 @@ sup {
 
 /* Media queries */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 425px) and (max-width: 1024px) {
     .game-container {
         position: absolute;
         left: 50%;
@@ -241,7 +239,7 @@ sup {
         max-width: 800px;
         margin: 0px auto;
     }
-
+    
     #memory-settings-grid,
     #tips-btn,
     #start {
@@ -256,12 +254,11 @@ sup {
 }
 
 .matched {
-    /* opacity azcık */
     border: 1px solid green;
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 425px) {
     #tips-container {
         width: 100%;
         height: 90%;
@@ -298,4 +295,15 @@ sup {
     pointer-events: none;
 }
 
+.card, .card-front {
+    height: 150px;
+    width:  70px;
+}
 
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 8vh;
+}
