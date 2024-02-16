@@ -86,6 +86,13 @@ If you want to exit the game or move to the next level, there is a
 
 - If the user cannot find the 2nd card with the correct value, the cards will be returned.
 
+#### Details
+- There is a 'Details' section at the top of the game cards. This section contains timer and flips.
+
+<details><summary> Details </summary>
+
+![Details](docs/features/details.png)
+</details>
 
 
 
