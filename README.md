@@ -142,6 +142,8 @@ If you want to exit the game or move to the next level, there is a
 ![Wave results](docs/testing/wave.png)
 </details>
 
+### Validator Testing
+
 
 
 
