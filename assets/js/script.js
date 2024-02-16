@@ -42,7 +42,6 @@ let mediumCardFrontTemplate = [
 //  Function that listens to level options
 const memorySettingsGrid = document.getElementById("memory-settings-grid");
 
-
 memorySettingsGrid.addEventListener("change", function () {
     const templateToUse = memorySettingsGrid.value;
     console.log("templateToUse:", templateToUse);
@@ -108,9 +107,7 @@ for (let i = 0; i < cardArray.length; i++) {
     });
 }
 
-
 let cardsFlipped = [];
-
 
 function checkCards(cardFront, cardBack) {
     const cardMatch = cardFront.querySelector('span').dataset.match;

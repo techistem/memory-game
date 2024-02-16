@@ -94,5 +94,14 @@ If you want to exit the game or move to the next level, there is a
 ![Details](docs/features/details.png)
 </details>
 
+### End Game
+- After the user matches all the cards, the text 'You find all matches' will automatically appear on the screen.
+<details><summary>End Game Message</summary>
+
+![End Game Message](docs/features/end-game-msj.png)
+</details>
+
+
+
 
 
