@@ -1,8 +1,7 @@
 # Math Games
-'Maths Game' is a memory game prepared for those who want to reinforce the subject of 'Exponent'. 
-This game is prepared in two levels: 'Easy' and 'Medium'. It consists of 12 4x3 cards in each section. 
-There is a time and flip section for how long and how many moves to match the cards. 
-This game requires challenging yourself.
+'Maths Game' is a memory game designed to help people challenge themselves with 'Exponents'. 
+This game has two levels: 'Easy' and 'Medium'. Each section has 12 4x3 cards and a timer to see how long and how many 
+moves it takes to match the cards.
 
 ![Math Games shown on a range of devices](docs/features/math-games.png)
 
@@ -10,17 +9,18 @@ This game requires challenging yourself.
 
 ## User Experience
 ### Site Owner's Goals
-- To creating an interactive online game to test users' knowledge of 'Exponent'
-- To raise awareness about the importance of attention and concentration, that sudden decisions of the user
- while trying to complete the game quickly result in errors and cause a complete loss of time
-- To provide a fully responsive game that can be played on a range of devices
+- To create an interactive online game to test users' knowledge of 'Exponents'.
+- To highlight the importance of attention and concentration. Sudden decisions to try to complete the game quickly 
+result in errors that lose time.
+- To provide a fully responsive game that can be played on a range of devices.
 ### External User's Goals
 - To play a fun and interactive online game to test my 'Exponent' knowledge
 - To easily navigate the site and to have a way to return to the Home page at any point of the game
 - To be able to restart the game at any point while I am playing the game
 ## Design
 ### Wireframes
-Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure and overall design of each page of the game.
+Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure 
+and overall design of each page of the game.
 <details><summary>Home page wireframe</summary>
 
 ![Home page wireframe](docs/wireframes/homepage.png)
@@ -32,18 +32,20 @@ Balsamiq wireframes were created for mobile, tablet and desktop devices to show 
 
 
 ### Colour Scheme
-Inspired by the flowing numbers in the movie 'The Matrix', the background color and the appropriate color were chosen. Green color is a color that is eye-catching and eye-catching.
+Inspired by the flowing numbers in the movie 'The Matrix', the background color and the appropriate color were chosen. 
+Green is a color that is eye-catching and engaging.
 ### Typography
-'Orbitron' was used as the font style. It is an interesting writing style for the game page. And it does not tire the eyes.
+'Orbitron' was used as the font style. It is an interesting writing style for the game page and it does not tire the eyes.
 ## Features
-This game is designed to be both fun and easy to use. In this way, it is a very fun game for classroom activities and for students to review the subject. The features implemented throughout the game support this goal.
+Designed to be both fun and easy to use, this game is appropriate for classroom activities and for students 
+to practice and learn individually. The features implemented throughout the game support this goal.
 ### Home page
--  This is what the user will be greeted with upon opening the game, and also what they will return to any time they click a button to return Home.
-- It is an easy to navigate Home page, with the title of the game at the top, and 3 buttons below:
+-  This is what the user will be greeted with upon opening the game, and also what they will return to any time they click the button to return Home.
+- IThe Home page is easy to navigate, with the title of the game at the top and three buttons below:
     
-    - A Play button to start the game
-    - A How to play button to take the user to the rules of the game
-    - A High Scores button to take the user to the high scores page
+    - A Play button to start the game.
+    - A How to Play button to take the user to the rules of the game.
+    - A High Scores button to take the user to the high scores page.
 
 <details><summary>Desktop home page</summary>
 
@@ -55,7 +57,7 @@ This game is designed to be both fun and easy to use. In this way, it is a very 
 </details>
 
 ### Tips
-- Tips section gives the user brief information about how to play the game with an example.
+- A Tips section gives the userinformation about how to play the game with an example.
 - There is also a Restart button at the bottom to allow the user to return to the Home page.
 
 <details><summary>Desktop tips section</summary>
@@ -69,10 +71,10 @@ This game is designed to be both fun and easy to use. In this way, it is a very 
 
 ### Game section
 - When the user selects either 'Easy' or 'Medium', 12 cards will appear 
-on the screen. When he clicks on one of these cards, he will try to 
-find the card corresponding to the value of the number he encounters.
-- Starting from 12 cards, matching cards 2 at a time will work. 
-If you want to exit the game or move to the next level, there is a 
+on the screen. When they click on one a card, they will then try to 
+find the card corresponding to the value of the number shown.
+- Starting with 12 cards, users will try to match two cards at a time. 
+If they want to exit the game or move to the next level, there is a 
 'Restart' button at the bottom.
 
 <details><summary>Desktop game section</summary>
@@ -87,7 +89,7 @@ If you want to exit the game or move to the next level, there is a
 - If the user cannot find the 2nd card with the correct value, the cards will be returned.
 
 #### Details
-- There is a 'Details' section at the top of the game cards. This section contains timer and flips.
+- There is a 'Details' section at the top of the game cards. This section contains the timer, for example.
 
 <details><summary> Details </summary>
 
@@ -102,29 +104,26 @@ If you want to exit the game or move to the next level, there is a
 </details>
 
 ### Future Features
-- I would also like to add the hard level to the game to allow the user to choose between easy, medium and hard questions. Because I believe that the difficulty level will give the user a different experience. He/she will be able to fill in the knowledge gap with more difficult questions.
+- I would like to add a 'hard' level to the game to allow the user to choose between easy, medium and hard questions.
+I believe that this extra difficulty level will give the user a different experience by being able to challenge themselves further as they build confidence.
 
-- I would like to add more questions to avoid repeating the questions of each section. The user will thus be excited as if completing the puzzle.
+- I would like to add more questions to each section and avoid repetition.
 
-- Sound effects or end-of-level celebration animations will make the game more attractive for the user. For example, there may be a sound effect when the user clicks on the wrong card.
+- Sound effects or animations will make the game more engaging for the user. For example, a sound effect when the user clicks on the right or wrong card
+and an animation to celebrate reaching the end of a level.
 
-- A more comprehensive game in which students can compete as a team in the classroom will enable students to participate more actively in lessons and work as a team.And a leaderboard can be made to list the teams.
+- An advanced version of the game in which students can compete as a team may enable students to participate more actively in lessons and work together.
+ A leaderboard could encourage friendly competition and celebrate team wins.
 
-- I would like to set a timer that counts down. In this way, they learn attention, concentration and coping with stress.
+- I would like to set a timer that counts down such that users learn the additional skills of concentration and adapting to time-pressure.
 
 ## Technologies
-- HTML
-    - Used to create the structure of the game
-- CSS
-    - Used to implement styling across the game
-- JavaScript
-    - Used to create interactivity throughout the game
-- Gitpod
-    - Used to develop and edit the code
-- Git
-    - Used to add, commit and push the code
-- GitHub
-  - Used to store and deploy the 
+- HTML: Used to create the structure of the game.
+- CSS: Used to implement styling across the game.
+- JavaScript: Used to create interactivity throughout the game.
+- Gitpod: Used to develop and edit the code.
+- Git: Used to add, commit and push the code.
+- GitHub: Used to store and deploy the code.
 - [Balsamiq](https://balsamiq.com/)
     - Used to create wireframes
 - [Google Fonts](https://fonts.google.com/)
@@ -170,22 +169,22 @@ If you want to exit the game or move to the next level, there is a
 </details>
 
 ### Testing User Stories
-- Expectation: Learning a mathematics subject in a fun and interactive way
-    - Result: Thanks to 2 levels of difficulty, the site is an interesting way 
-to test the user's knowledge. 
-- Expectation: The user must complete the game in the shortest time with the fewest moves.
-    - Result: Due to the users' level of knowledge, their inability to concentrate, etc., the time to complete the task and the number of times they clicked on the cards varied.
-- Expectation: Having clear instructions on how to play the game
-    - Result: In the Tips section, the game is explained with an example on how to play the game.
-- Expectation: To easily navigate the site and to have a way to return to the Home page at any point of the quiz.
+- Expectation: Learning a mathematics subject in a fun and interactive way.
+    - Result: With two levels of difficulty, the site is an interesting way to test users' knowledge. 
+- Expectation: The user must complete the game in the shortest time possible and with the fewest moves.
+    - Result: Users' ability to concentrate, the time to complete the task and the number of times the cards are 
+    clicked varies according to their level of knowledge.
+- Expectation: Having clear instructions on how to play the game.
+    - Result: The Tips section explains how to play the game, with an example.
+- Expectation: To easily navigate the site and have a way to return to the Home page at any point of the game.
     - Result: There is a 'Restart' button at the bottom of the cards to return to the home page.
 ### Solved Bugs
-- The cards were not shuffled every time the start button was clicked.
-    - Fixed this by adding an event listener that triggered the shuffling function when the start button was clicked.
-- When Exponents were placed in the 'div' element in HTML, they could not be activated with JS.
-    - The `cardFrontTemplate` variable is created to contain an array containing the HTML structure of each card.
-- 7<sup>2</sup> The numbers, created in the form  covered the surface of the cards.
-    - Transform property was used in CSS. CSS style adjustments were made according to different screens.
+- The cards were not shuffled. I fixed this by adding an event listener that triggered the shuffling function when the start 
+button was clicked.
+- When Exponents were placed in the 'div' element in HTML, they could not be activated with JS:
+The `cardFrontTemplate` variable is creates an array containing the HTML structure of each card.
+- 7<sup>2</sup> The numbers created in the form  covered the surface of the cards.
+- Transform property was used in CSS. CSS style adjustments were made according to different screens.
 
 ## Credits
 ### Content
