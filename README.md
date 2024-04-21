@@ -186,6 +186,53 @@ The `cardFrontTemplate` variable is creates an array containing the HTML structu
 - 7<sup>2</sup> The numbers created in the form  covered the surface of the cards.
 - Transform property was used in CSS. CSS style adjustments were made according to different screens.
 
+### Deployment
+
+The site was deployed to GitHub Pages. The steps to deploy are as follows:
+
+- In the [GitHub repository](https://github.com/techistem/memory-game), navigate to the Settings tab 
+- From the source section drop-down menu, select the **Main** Branch, then click "Save".
+- The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://techistem.github.io/memory-game)
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+#### Cloning
+
+You can clone the repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/techistem/memory-game) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	- `git clone https://github.com/techistem/memory-game.git`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/techistem/memory-game)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/techistem/memory-game)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+### Local VS Deployment
+
+There are no major differences between the local version in Gitpod, versus the live version on GitHub Pages.
+
 ## Credits
 ### Content
 - The questions and solutions of the game were written by myself.
