@@ -1,6 +1,9 @@
+/* jshint esversion: 11 */
 //selectors
 const tipsContainer = document.getElementById("tips-container");
+const endContainer = document.getElementById("end-container");
 const closeContainer = document.getElementById("close-container");
+const closeEndContainer = document.getElementById("close-end-container");
 const cardContainer = document.getElementById("card-container");
 const controlsContainer = document.getElementById("controls-container");
 const flipsEl = document.querySelector(".flips");
@@ -210,7 +213,10 @@ restartBtn.addEventListener("click", function () {
 function endGame() {
     clearInterval(timer);
     setTimeout(() => {
-        alert("You found all matches!");
+        endContainer.classList.remove("hide");
+        closeEndContainer.addEventListener("click", function () {
+            endContainer.classList.add("hide");
+        });
     }, 500);
 }
 
